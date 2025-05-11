@@ -22,7 +22,7 @@ Here is an example:
 conda create -n "ACIP" python=3.8.13
 ```
 
-3. Activate your CFA Conda environment. 
+3. Activate your ACIP Conda environment. 
 
 ```
 conda activate ACIP
