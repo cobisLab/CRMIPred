@@ -51,7 +51,7 @@ cd CRMIPred
 4. Download the processed epigenetic datasets from the following link.
 
 ```
-wget https://cobis-fs.bme.ncku.edu.tw/CRMIPred/CRMIPred_Dataset.tar.gz
+wget https://cobis-fs.bme.ncku.edu.tw/CRMIPred/Data.tar.gz
 ```
 
 5. Unzip the file.
