@@ -1,8 +1,8 @@
-# ACIP (Attention-based CRM Interaction Predictor)
+# CRMIPred (CRM Interaction Predictor)
 
 
 ## Related paper:
-Yu-Huai Yu+, You-An Kuo+, He-Ruei Lee, and Tzu-Hsien Yang* "ACIP: identifying spatial interactions among Drosophila cis-regulatory modules via considering their cross-attended epigenetic profiles", (submitting).
+Yu-Huai Yu+, Wei-Cheng Dai+, Zhi-Hao Jiang+ and Tzu-Hsien Yang* "CRMIPred: identifying the spatial interactions among Drosophila cis-regulatory modules via considering their cross-attended epigenetic profiles", (submitting).
 
 +: These authors contributed equally.
 
@@ -16,16 +16,16 @@ Here is an example:
 
 1. Install the Conda package for you system. The installation of the package can be found <a href="https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html">here</a>. 
 
-2. Create the ACIP Conda environment. This may take a while, depending on the network status.
+2. Create the CRMIPred Conda environment. This may take a while, depending on the network status.
 
 ```
-conda create -n "ACIP" python=3.8.13
+conda create -n "CRMIPred" python=3.8.13
 ```
 
-3. Activate your ACIP Conda environment. 
+3. Activate your CRMIPred Conda environment. 
 
 ```
-conda activate ACIP
+conda activate CRMIPred
 ```
 
 ## Steps to Use ACIP
@@ -33,40 +33,40 @@ conda activate ACIP
 1. Download the codes from the following link and unzip the file. Please skip it if you have done this step.
 
 ```
-wget https://cobis-fs.bme.ncku.edu.tw/ACIP/ACIP.tar.gz
+wget https://cobis-fs.bme.ncku.edu.tw/CRMIPred/CRMIPred.tar.gz
 ```
 
 2. Unzip the file.
 
 ```
-tar -zxvf ACIP.tar.gz
+tar -zxvf CRMIPred.tar.gz
 ```
 
 3. Change the working directory.
 
 ```
-cd ACIP
+cd CRMIPred
 ```
 
 4. Download the processed epigenetic datasets from the following link.
 
 ```
-wget https://cobis-fs.bme.ncku.edu.tw/ACIP/ACIP_Dataset.tar.gz
+wget https://cobis-fs.bme.ncku.edu.tw/CRMIPred/CRMIPred_Dataset.tar.gz
 ```
 
 5. Unzip the file.
 
 ```
-tar -zxvf ACIP_Dataset.tar.gz
+tar -zxvf CRMIPred_Dataset.tar.gz
 ```
 
-6. If this is the first time you use ACIP, run the following command to install necessary packages. 
+6. If this is the first time you use CRMIPred, run the following command to install necessary packages. 
 
 ```
 pip install -r requirements.txt
 ```
 
-ACIP can also support GPU acceleration. If you want to utilize GPU, please run the following command instead:
+CRMIPred can also support GPU acceleration. If you want to utilize GPU, please run the following command instead:
 
 ```
 pip install -r requirements_gpu.txt
@@ -92,7 +92,7 @@ python main.py -i <input_txt_file> -o <output_file_name>
 ```
 >**Required arguments:**
 >
->* -i: The input file for ACIP.
+>* -i: The input file for CRMIPred.
 >
 >* -o: The output prediction results.
 
