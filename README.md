@@ -28,7 +28,7 @@ conda create -n "CRMIPred" python=3.8.13
 conda activate CRMIPred
 ```
 
-## Steps to Use ACIP
+## Steps to Use CRMIPred
 
 1. Download the codes from the following link and unzip the file. Please skip it if you have done this step.
 
@@ -75,9 +75,11 @@ pip install -r requirements_gpu.txt
 
 7. Prepare the input Drosophila CRM region pairs (ver. dm6).
      
-   The input CRM pair format **SHOULD** followed the following formats:
+   The input CRM pair format **MUST** followed the following formats:
    
-   CRM\_[chromosome]\_[start]\_[end]@CRM\_[chromosome]\_[start]\_[end]
+`CRM_[chromosome]_[start1]_[end1]@CRM_[chromosome]_[start2]_[end2]`
+   
+   **Important Rule:** The start position of the first CRM must be smaller than the start position of the second CRM (`start1 < start2`).
    
    For example: (as the input file named input_Test.csv) 
    
@@ -88,14 +90,18 @@ pip install -r requirements_gpu.txt
 8. Predict the probability if the given CRM pairs are interacting pairs.
 
 ```
-python main.py -i <input_txt_file> -o <output_file_name>
+python main.py -i <input_txt_file> -o <output_file_name> -mode <normal|reduced>
 ```
+
 >**Required arguments:**
 >
 >* -i: The input file for CRMIPred.
 >
 >* -o: The output prediction results.
-
+>
+>**Optional arguments:**
+>
+>* -mode: 'normal' (default model) or 'reduced' (reduced version model).
 
 ## Output Results
 If we use the following as our inputs with the example command:
